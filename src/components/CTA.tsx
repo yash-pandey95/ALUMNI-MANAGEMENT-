@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const benefits = [
   "14-day free trial",
@@ -37,16 +38,20 @@ const CTA = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary shadow-elegant px-8"
-              >
-                Start Your Free Trial
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="lg" className="px-8">
-                Schedule Demo
-              </Button>
+              <Link to="/signup">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary shadow-elegant px-8"
+                >
+                  Start Your Free Trial
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link to="/demo">
+                <Button variant="outline" size="lg" className="px-8">
+                  Schedule Demo
+                </Button>
+              </Link>
             </div>
 
             <p className="text-sm text-muted-foreground">

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, TrendingUp, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-alumni.jpg";
 
 const Hero = () => {
@@ -42,16 +43,20 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary shadow-elegant"
-              >
-                Start Free Trial
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="lg">
-                Watch Demo
-              </Button>
+              <Link to="/signup">
+                <Button 
+                  size="lg" 
+                  className="bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary shadow-elegant"
+                >
+                  Start Free Trial
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link to="/demo">
+                <Button variant="outline" size="lg">
+                  Watch Demo
+                </Button>
+              </Link>
             </div>
           </div>
 
